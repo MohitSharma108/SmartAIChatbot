@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Smart AI Chat</string>
+    <string name="new_chat">New chat</string>
+    <string name="history">Chat history</string>
+    <string name="back">Back</string>
+    <string name="hint_message">Message</string>
+    <string name="send">Send message</string>
+    <string name="copy">Copy response</string>
+    <string name="copied">Copied to clipboard</string>
+    <string name="welcome_title">How can I help you today?</string>
+    <string name="welcome_subtitle">Ask anything, or try one of these:</string>
+    <string name="example_1">Explain artificial intelligence in simple terms</string>
+    <string name="example_2">Write a short email asking for a deadline extension</string>
+    <string name="example_3">Give me a 3-day study plan for databases</string>
+    <string name="retry">Retry</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="history_title">Chat history</string>
+    <string name="no_conversations">No conversations yet. Start a new chat!</string>
+    <string name="delete_title">Delete conversation?</string>
+    <string name="delete_message">\"%1$s\" and all of its messages will be deleted. This cannot be undone.</string>
+    <string name="delete">Delete</string>
+    <string name="delete_conversation">Delete conversation</string>
+    <string name="cancel">Cancel</string>
+    <string name="err_empty">Type a message first</string>
+    <string name="err_too_long">Message is too long (max %1$d characters)</string>
+    <string name="busy_wait">Please wait for the current reply</string>
+    <string name="status_sending">Sending…</string>
+    <string name="status_failed">Not sent. Tap to retry</string>
+</resources>
