@@ -50,3 +50,19 @@ must use HTTPS.
 The archive does not include an Android SDK, Java runtime, Gradle wrapper, or
 OpenAI credentials, so an Android build requires a local Android Studio/SDK
 installation and a configured `backend/.env`.
+
+## Online website deployment
+
+The repository includes a browser chat website in `website/` and a Render
+Blueprint in `render.yaml`. Create a Render Web Service from this repository,
+or deploy the Blueprint. Use the repository root as the service root, then set
+these environment variables in Render:
+
+```text
+OPENAI_API_KEY=your_real_key
+OPENAI_MODEL=your_supported_model
+```
+
+The service runs `cd backend && npm start` and serves the website and `/chat`
+API from the same HTTPS URL. Never commit `backend/.env` or place the API key
+in browser JavaScript.

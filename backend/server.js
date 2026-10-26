@@ -4,11 +4,13 @@ import 'dotenv/config';
 import express from 'express';
 import rateLimit from 'express-rate-limit';
 import OpenAI from 'openai';
-import { pathToFileURL } from 'node:url';
+import path from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 // ---------- configuration (fail fast) ----------
 const { OPENAI_API_KEY, OPENAI_MODEL, OPENAI_BASE_URL } = process.env;
 const PORT = Number(process.env.PORT) || 3000;
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 if (!OPENAI_API_KEY || !OPENAI_MODEL) {
   console.error('Missing configuration: set OPENAI_API_KEY and OPENAI_MODEL in backend/.env (copy .env.example).');
@@ -169,6 +171,8 @@ app.post('/chat', chatLimiter, async (req, res) => {
     return handleUpstreamError(err, res);
   }
 });
+
+app.use(express.static(path.join(__dirname, '..', 'website')));
 
 app.use((req, res) => sendError(res, 404, 'not_found', 'Route not found.'));
 

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: smartaichatbot
+    runtime: node
+    buildCommand: npm ci --prefix backend
+    startCommand: cd backend && npm start
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        sync: false
