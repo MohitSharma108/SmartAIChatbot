@@ -2,6 +2,7 @@ services:
   - type: web
     name: smartaichatbot
     runtime: node
+    plan: free
     buildCommand: npm ci --prefix backend
     startCommand: cd backend && npm start
     envVars:
